@@ -35,7 +35,7 @@
                                                     </iframe>
                                                 </div>
                                                 <div class="p-2 w-88 sm:w-96 items-center">
-                                                    <div class="rounded-md shadow-sm">
+                                                    <div class="rounded-md shadow-sm w-full">
                                                         <div class="flex justify-center mb-4">
                                                             <h2
                                                                 class="mt-1 px-5 text-center text-lg font-extrabold text-gray-700">

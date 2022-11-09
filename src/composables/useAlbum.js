@@ -17,8 +17,7 @@ export const useAlbumStore = () => {
             if (host === 'www.youtube.com') {
                 let array = []
                 const searchParams = new URLSearchParams(linkYoutube);
-                for (const p of searchParams) {
-                    console.log(p);
+                for (const p of searchParams) {                    
                     array.push(...p)
                 }
                 idVideo = array[1]
