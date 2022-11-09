@@ -9,11 +9,5 @@ const ApiYoutube = axios.create({
         // "Accept-Language": "es"
     }
 });
-/* Api.interceptors.request.use((config) => {
-      config.headers = {
-          Authorization: `bearer ${sessionStorage.getItem('token')}`
-      } 
-    return config
-}) */
 export { ApiYoutube}
 

@@ -21,7 +21,7 @@
                                     <div class="mt-1 text-center sm:mt-0 sm:ml-2 sm:text-left">
                                         <div class="mt-2">
                                             <div class="flex justify-end">
-                                                <button class="font-bold" @click="$emit('close', false)">X</button>
+                                                <button class="font-bold focus:outline-none" @click="$emit('close', false)">X</button>
                                             </div>
 
                                             <div
