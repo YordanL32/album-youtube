@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="mx-4">
         <label for="search" class="font-semibold ">Añadir nuevo video</label><br>
         <div class="sm:flex my-2">
             <input v-model="link" class="w-full rounded-md  relative block w-full px-3 py-2 border  
@@ -11,8 +11,7 @@
     </div>
 </template>
 <script setup>
-import { ref } from 'vue';
 import {useAlbumStore} from '../composables/useAlbum'
-const {addVideos} = useAlbumStore()
-const link = ref('')
+const {addVideos, link} = useAlbumStore()
+
 </script>

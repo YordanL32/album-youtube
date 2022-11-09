@@ -1,8 +1,8 @@
 <template> 
     <div class="flex justify-center mx-5 my-10">
-        <div class="w-8/12">
+        <div class="w-full sm:w-8/12 ">
             <SearchBar />
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 my-10 ">              
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 my-10 mr-10 ">              
                 <CardVideo v-for="video of videos" :key="video.id" class="w-full" :video="video" />
             </div>
         </div>

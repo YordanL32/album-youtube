@@ -6,16 +6,17 @@ export const useAlbumStore = () => {
     const useAlbumS = useAlbum()
     const msj = ref(false)
     const open = ref(false)
+    const link = ref('')
     const id = ref(null)
     const { videos, datailsVideo, error, isLoading } = storeToRefs(useAlbumS)
     const loadVideos = async () => await useAlbumS.loadVideos()
-    const addVideos = async (link = '') => {
+    const addVideos = async (linkYoutube = '') => {
         try {
             let idVideo = ''
-            let { host, pathname } = new URL(link);
+            let { host, pathname } = new URL(linkYoutube);
             if (host === 'www.youtube.com') {
                 let array = []
-                const searchParams = new URLSearchParams(link);
+                const searchParams = new URLSearchParams(linkYoutube);
                 for (const p of searchParams) {
                     console.log(p);
                     array.push(...p)
@@ -27,7 +28,8 @@ export const useAlbumStore = () => {
                 error.value = 'Enlace incorrecto'
                 Swal.alertCreate('Error', error.value, 'error')
             }
-            await useAlbumS.addVideo(idVideo)           
+            await useAlbumS.addVideo(idVideo)
+            link.value=''           
         } catch (error) {
             error.value = 'Enlace incorrecto'
             Swal.alertCreate('Error', error.value, 'error')
@@ -44,6 +46,7 @@ export const useAlbumStore = () => {
     }
     return {
         msj,
+        link,
         open,
         id,
         error,
